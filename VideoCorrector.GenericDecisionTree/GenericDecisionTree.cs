@@ -105,6 +105,8 @@ namespace VideoCorrector.LearningAlgorithms
             }
             else
             {
+ 
+
                 IGrouping<int, GenericDecisionTreeTrainingData<T>>[] parts =
                     trainingData.GroupBy(m => m.Class).OrderByDescending(m => m.Count()).ToArray();
 
@@ -112,6 +114,11 @@ namespace VideoCorrector.LearningAlgorithms
 
                 thisNode.IsLeaf = true;
                 thisNode.Class = parts[0].Key;
+
+                if (recursionLevel == parameters.MaxRecursionLevels)
+                {
+                    thisNode.Class = 0; 
+                }
             }
         }
     }

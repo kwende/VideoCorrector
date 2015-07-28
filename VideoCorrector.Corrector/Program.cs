@@ -60,7 +60,7 @@ namespace VideoCorrector.Corrector
                 MaxRecursionLevels = 20,
                 SufficientGainLevel = 0,
                 MaximumOffset = 50,
-                MinimumOffset = 5,
+                MinimumOffset = -50,
                 NumberOfQuestions = 1000
             };
 
