@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoCorrector.Corrector", "VideoCorrector.Corrector\VideoCorrector.Corrector.csproj", "{3FA1920E-0BEB-4537-9DB6-4A298FD14C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoCorrector.LearningAlgorithms", "VideoCorrector.GenericDecisionTree\VideoCorrector.LearningAlgorithms.csproj", "{E48852B0-78B1-4929-A066-B6B62D1D12C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoCorrector.LearningAlgorithms.Specific", "VideoCorrector.LearningAlgorithms.Specific\VideoCorrector.LearningAlgorithms.Specific.csproj", "{D4152692-D751-4E09-BC18-29AC8A79231E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FA1920E-0BEB-4537-9DB6-4A298FD14C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA1920E-0BEB-4537-9DB6-4A298FD14C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA1920E-0BEB-4537-9DB6-4A298FD14C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA1920E-0BEB-4537-9DB6-4A298FD14C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48852B0-78B1-4929-A066-B6B62D1D12C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48852B0-78B1-4929-A066-B6B62D1D12C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48852B0-78B1-4929-A066-B6B62D1D12C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48852B0-78B1-4929-A066-B6B62D1D12C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4152692-D751-4E09-BC18-29AC8A79231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4152692-D751-4E09-BC18-29AC8A79231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4152692-D751-4E09-BC18-29AC8A79231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4152692-D751-4E09-BC18-29AC8A79231E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
