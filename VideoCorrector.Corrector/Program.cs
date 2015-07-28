@@ -41,14 +41,15 @@ namespace VideoCorrector.Corrector
                     GenericDecisionTreeTrainingData<GrayPixel> trainingDataPoint =
                         new GenericDecisionTreeTrainingData<GrayPixel>();
 
+                    int originalIntensity = highRes.GetPixel(x, y).R;
+                    int lowResIntensity  =lowRes.GetPixel(x, y).R; 
+
                     trainingDataPoint.Data = new GrayPixel();
                     trainingDataPoint.Data.Coordinate = new Point(x, y);
                     trainingDataPoint.Data.ImageData = lowResBytes;
                     trainingDataPoint.Data.ImageWidth = lowRes.Width;
                     trainingDataPoint.Data.ImageHeight = lowRes.Height;
-                    trainingDataPoint.Data.OriginalIntensity = highRes.GetPixel(x, y).R;
-                    trainingDataPoint.Class = (trainingDataPoint.Data.OriginalIntensity -
-                        lowRes.GetPixel(x, y).R);
+                    trainingDataPoint.Class = (originalIntensity - lowResIntensity);
 
                     trainingData.Add(trainingDataPoint);
                 }
@@ -136,7 +137,7 @@ namespace VideoCorrector.Corrector
 
         static void Main(string[] args)
         {
-            //Train(); 
+            Train(); 
             Test(); 
         }
     }

@@ -49,12 +49,12 @@ namespace VideoCorrector.LearningAlgorithms.Specific.GrayscaleCorrectorTree
                 baseCoordinate.Y + grayCandidateQuestion.OffsetVector.Y);
 
             int offsetIndex = (int)(offsetCoordinate.Y *
-                trainingDataPoint.Data.ImageWidth + offsetCoordinate.X);
+                trainingDataPoint.Data.ImageWidth + offsetCoordinate.X) * 3;
             int baseCoordinateIndex = (int)(baseCoordinate.Y *
-                trainingDataPoint.Data.ImageWidth + baseCoordinate.X); 
+                trainingDataPoint.Data.ImageWidth + baseCoordinate.X) * 3; 
 
-            if(offsetIndex < 0 || offsetIndex > imageData.Length ||
-                baseCoordinateIndex < 0 || baseCoordinateIndex > imageData.Length ||
+            if(offsetIndex < 0 || offsetIndex >= imageData.Length ||
+                baseCoordinateIndex < 0 || baseCoordinateIndex >= imageData.Length ||
                 imageData[offsetIndex] > imageData[baseCoordinateIndex])
             {
                 return TreeSplitDirectionEnum.Left; 
