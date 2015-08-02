@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using VideoCorrector.CV;
 using VideoCorrector.LearningAlgorithms;
 using VideoCorrector.LearningAlgorithms.Specific.GrayscaleCorrectorTree;
 
@@ -135,10 +136,20 @@ namespace VideoCorrector.Corrector
             newBitmap.Save("C:/users/ben/desktop/new.jpg"); 
         }
 
+        static void StandardConvert()
+        {
+            Bitmap converted = 
+                PhotoshopSDToHD.DoIt(
+                (Bitmap)Bitmap.FromFile(@"C:\Users\Ben\Desktop\mash.jpg"));
+
+            converted.Save("C:/users/ben/desktop/mash_converted.png", ImageFormat.Png); 
+        }
+
         static void Main(string[] args)
         {
-            Train(); 
-            Test(); 
+            //Train(); 
+            //Test(); 
+            StandardConvert(); 
         }
     }
 }
